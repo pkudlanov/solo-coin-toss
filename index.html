@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
     <header>
@@ -12,16 +13,16 @@
     </header>
 
     <main>
-        <p>
-            <span>Wins: 0</span>
-            <span>Losses: 0</span>
+        <p id="wins-losses">
+            <label>Wins: 0</label>
+            <label>Losses: 0</label>
         </p>
         <p>
-            <img id="coin-face" src="" alt="Picture of either heads or tails">
+            <img id="coin-face" src="./assets/Tails.png" alt="Picture of either heads or tails">
         </p>
-        <p>
-            <radio>Heads</radio>
-            <radio>Tails</radio>
+        <p id="radio">
+            <label><input type="radio" name="face-side" value="heads" checked>Heads</label>
+            <label><input type="radio" name="face-side" value="tails">Tails</label>
         </p>
         <p>
             <button>Flip the Coin! Earn Some Cash!</button>

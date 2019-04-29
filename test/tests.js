@@ -25,18 +25,41 @@ test('Checks that bet is no bigger then the amount of money they have.', functio
     const bet = 1001;
     const moneyHas = 1000;
     const expected = false;
-
+    
     const result = betSizeChecker(bet, moneyHas);
-
+    
     assert.equal(result, expected);
 })
 
+import betJustifier from "../src/bet-justifier.js";
 test('If bet is not bigger then how much money they have returns true.', function(assert){
     const bet = 999;
     const moneyHas = 1000;
     const expected = true;
 
     const result = betSizeChecker(bet, moneyHas);
+
+    assert.equal(result, expected);
+})
+
+test('Adds bet to money in bank if won', function(assert){
+    const bet = 100;
+    const selfWorth = 1000;
+    const gameResult = true;
+    const expected = 1100;
+
+    const result = betJustifier(bet, selfWorth, gameResult);
+
+    assert.equal(result, expected);
+})
+
+test('Subtracts bet from money in bank if lost', function(assert){
+    const bet = 100;
+    const selfWorth = 1000;
+    const gameResult = false;
+    const expected = 900;
+
+    const result = betJustifier(bet, selfWorth, gameResult);
 
     assert.equal(result, expected);
 })

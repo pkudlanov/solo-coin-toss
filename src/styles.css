@@ -1,5 +1,5 @@
 body{
-    max-width: 450px;
+    max-width: 550px;
     margin: auto;
     padding-left: 30px;
     padding-right: 30px;
@@ -26,7 +26,7 @@ h2{
     user-select: none;
 }
 label{
-    margin: 20px;
+    margin-bottom: 20px;
     font-size: 18px;
 }
 .radio{
@@ -47,4 +47,8 @@ label{
     background-color: rgb(255, 233, 214);
     height: 15px;
     width: 100px;
+}
+#wins, #losses{
+    margin-left: 10px;
+    margin-right: 10px;
 }

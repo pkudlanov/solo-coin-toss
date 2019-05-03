@@ -31,7 +31,7 @@ test('Checks that bet is no bigger then the amount of money they have.', functio
     assert.equal(result, expected);
 });
 
-import betJustifier from "../src/bet-justifier.js";
+import betJustifier from '../src/bet-justifier.js';
 test('If bet is not bigger then how much money they have returns true.', function(assert){
     const bet = 999;
     const moneyHas = 1000;

@@ -44,9 +44,9 @@ newButton.addEventListener('click', () => {
         lossesCount.textContent = 'Losses: ' + losses;
     }
 
-    if(betInput.value > moneyInBank){
+    if (betInput.value > moneyInBank){
         window.alert('You cannot bet more money than what you have. Make a smaller bet.');
-    }else{
+    } else {
         var myMessage = betJustifier(betInput.value, moneyInBank, winCondition);
         moneyHas.textContent = '$' + myMessage;
         moneyInBank = myMessage;

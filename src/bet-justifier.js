@@ -1,9 +1,9 @@
 function betJustifier(betAmount, selfWorth, gameResult){
-    if(gameResult){
+    if (gameResult){
         var money = selfWorth + parseInt(betAmount);
         return money;
-    }else{
-        var money = selfWorth - betAmount;
+    } else {
+        money = selfWorth - betAmount;
         return money;
     }
 }

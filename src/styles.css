@@ -1,0 +1,54 @@
+body{
+    max-width: 550px;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    background-color: rgb(253, 217, 169);
+}
+header{
+    color: rgb(255, 123, 0);
+    font-style: bold;
+    font-size: 15px;
+}
+hr{
+    border-color: rgb(216, 133, 0);
+}
+h2{
+    font-size: 20px;
+}
+#message{
+    font-size: 50px;
+    color: rgb(255, 136, 0);
+    background-color: hsla(0, 0%, 0%, 0.644);;
+    padding: 7px;
+    border-radius: 20px;
+    user-select: none;
+}
+label{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.radio{
+    margin: 20px;
+    margin-top: 0px;
+}
+#coin-container{
+    position: relative;
+    text-align: center;
+}
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#bet{
+    background-color: rgb(255, 233, 214);
+    height: 15px;
+    width: 100px;
+}
+#wins, #losses{
+    margin-left: 10px;
+    margin-right: 10px;
+}

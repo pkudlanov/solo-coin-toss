@@ -1,7 +1,7 @@
 function betSizeChecker(bet, moneyHas){
     if(bet >= moneyHas){
         return false;
-    }else{
+    } else {
         return true;
     }
 }

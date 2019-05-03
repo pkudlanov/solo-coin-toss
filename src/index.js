@@ -7,11 +7,12 @@ const coinFace = document.getElementById('coin-face');
 const headsChoice = document.getElementById('heads-choice');
 const resultMessage = document.getElementById('message');
 const newButton = document.getElementById('coin-container');
-const betInput = document.getElementById('bet').value;
-const moneyHas.textContent = document.getElementById('money-has');
+const betInput = document.getElementById('bet');
+let moneyHas = document.getElementById('money-has');
 
-var losses = 0;
-var wins = 0;
+let losses = 0;
+let wins = 0;
+let moneyInBank = 1000;
 
 newButton.addEventListener('click', () => {
     const randomNumber = Math.random();
@@ -23,7 +24,7 @@ newButton.addEventListener('click', () => {
     let ourChoice;
     if(headsChoice.checked){
         ourChoice = 'heads';
-    }else{
+    } else {
         ourChoice = 'tails';
     }
 
@@ -31,24 +32,28 @@ newButton.addEventListener('click', () => {
     
     if(winCondition){
         resultMessage.textContent = 'You won!';
-    }else{
+    } else {
         resultMessage.textContent = 'You lost!';
     }
 
     if(winCondition){
         wins++;
         winsCount.textContent = 'Wins: ' + wins;
-    }else{
+    } else {
         losses++;
         lossesCount.textContent = 'Losses: ' + losses;
     }
 
-    let moneyInBank = moneyHas.nodeValue
-    if(betInput > moneyInBank){
-        window.alert('You cannot bet more money they what you have. Make a smaller bet.');
+    if(betInput.value > moneyInBank){
+        window.alert('You cannot bet more money than what you have. Make a smaller bet.');
     }else{
-        var myMessage = betJustifier(betInput, moneyInBank, winCondition);
+        var myMessage = betJustifier(betInput.value, moneyInBank, winCondition);
+        moneyHas.textContent = '$' + myMessage;
+        moneyInBank = myMessage;
     }
 
-    moneyHas.textContent = '$' + myMessage;
+    if (myMessage === 0){
+        window.alert('You are out of money!');
+        location.reload();
+    }
 });

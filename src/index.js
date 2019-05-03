@@ -44,7 +44,7 @@ newButton.addEventListener('click', () => {
         lossesCount.textContent = 'Losses: ' + losses;
     }
 
-    if (betInput.value > moneyInBank){
+    if(betInput.value > moneyInBank){
         window.alert('You cannot bet more money than what you have. Make a smaller bet.');
     } else {
         var myMessage = betJustifier(betInput.value, moneyInBank, winCondition);
@@ -52,7 +52,7 @@ newButton.addEventListener('click', () => {
         moneyInBank = myMessage;
     }
 
-    if (myMessage === 0){
+    if(myMessage === 0){
         window.alert('You are out of money!');
         location.reload();
     }
